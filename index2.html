@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OTP Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+    .img {
+      height: 160px;
+      width: 384px;
+      background-color: #F7F8FF;
+    }
+
+    .p {
+      font-size: 25px;
+      position: relative;
+      top: 10px;
+      margin-left: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+
+    .span-text {
+      height: 10px;
+      width: 168px;
+      background-color: white;
+      position: relative;
+      top: 10px;
+      left: 12px;
+      opacity: 1;
+      font-size: 15px;
+      color: #818181;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .inputOTP {
+      width: 40px;
+      height: 40px;
+      font-size: 15px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+
+    .otpBox {
+      position: relative;
+      top: 65px;
+      left: 5px;
+      width: 354px;
+      display: flex;
+      justify-content: space-evenly;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+
+    #otpTimer {
+      position: relative;
+      top: 10px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .timerDiv {
+      height: 40px;
+      width: 80px;
+      border-radius: 25px;
+      border: 1px solid white;
+      background-color: #C6EDFF;
+      position: relative;
+      top: 100px;
+      left: 8px;
+      font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .btn-continue {
+      position: relative;
+      width: 365px;
+      height: 60px;
+      top: 150px;
+      left: 5px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      font-weight: bold;
+      background-color: #000F6A;
+      color: white;
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+
+</head>
+
+<body>
+  <img src="/otp-mobile.a0e3637a.png" class="img">
+  <p class="p">Verify With OTP</p>
+  <span class="span-text" id="span-text">sent to your number</span>
+  <div class="otpBox">
+    <input type="number" class="inputOTP" maxlength="1">
+    <input type="number" class="inputOTP" maxlength="1">
+    <input type="number" class="inputOTP" maxlength="1">
+    <input type="number" class="inputOTP" maxlength="1">
+    <input type="number" class="inputOTP" maxlength="1">
+    <input type="number" class="inputOTP" maxlength="1">
+  </div>
+
+  <div class="timerDiv">
+    <div id="otpTimer">00:00</div>
+  </div>
+  <button type="submit" class="btn-continue">Verify</button>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    //First will select all inputfield
+    $(function() {
+      $("input").keydown(function() {
+        // Save old value.
+        if (!$(this).val() || (parseInt($(this).val()) <= 9 && parseInt($(this).val()) >= 0))
+          $(this).data("old", $(this).val());
+      });
+      $("input").keyup(function() {
+        // Check correct, else revert back to old value.
+        if (!$(this).val() || (parseInt($(this).val()) <= 9 && parseInt($(this).val()) >= 0))
+        ;
+        else
+          $(this).val($(this).data("old"));
+      });
+    });
+
+    let timeSecond = 60;
+    const timeH = document.getElementById("otpTimer");
+
+    displayTime(timeSecond);
+
+    const countDown = setInterval(() => {
+      timeSecond--;
+      displayTime(timeSecond);
+      if (timeSecond == 0 || timeSecond < 1) {
+        endCount();
+        clearInterval(countDown);
+      }
+    }, 1000);
+
+    function displayTime(second) {
+      const min = Math.floor(second / 60);
+      const sec = Math.floor(second % 60);
+      timeH.innerHTML = `
+      ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+      `;
+    }
+
+    function endCount() {
+      timeH.innerHTML = "<p style ='width:250px; background-color:white;height:60px;position:relative;bottom:28px;right:px;font-size:18px;'>Didn't get OTP?&nbsp;<a href='#' style='text-decoration:none;color:#527AFF;'>Resend</a></p>";
+    }
+  </script>
+  <script>
+    var myopt = document.querySelectorAll(".inputOTP");
+    //will check in console first.
+    for (var i = 0; i < myopt.length - 1; i++) {
+      myopt[i].addEventListener("keyup", function() {
+        this.nextElementSibling.focus();
+      })
+    }
+  </script>
+
+
+</body>
+
+</html>
