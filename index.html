@@ -19,9 +19,11 @@
       width: 384px;
       background-size: red;
     }
-    .imgDiv{
+
+    .imgDiv {
       background-color: #F7F8FF;
     }
+
     .p {
       font-size: 25px;
       margin-left: 10px;
@@ -82,11 +84,17 @@
       color: #000F6A;
     }
 
+    .terms-box {
+      top: 20px;
+      position: relative;
+      height: 50px;
+    }
+
     .input-checkbox {
       height: 20px;
       width: 20px;
       position: relative;
-      top: 40px;
+      top: 10px;
       left: 15px;
       display: inline-block;
     }
@@ -94,12 +102,13 @@
     .a-link {
       text-decoration: none;
       color: #0077EE;
+      top: 10px;
     }
 
     .terms-text {
       position: relative;
-      top: 16px;
-      left: 50px;
+      top: 5px;
+      left: 18px;
       font-family: 'Montserrat', sans-serif;
     }
 
@@ -107,7 +116,7 @@
       position: relative;
       width: 365px;
       height: 60px;
-      top: 80px;
+      top: 50px;
       left: 5px;
       border-radius: 5px;
       outline: none;
@@ -127,6 +136,131 @@
       display: none;
     }
 
+    @media (max-width: 480px) {
+      .img {
+        height: 160px;
+        width: 384px;
+        background-size: red;
+      }
+
+      .imgDiv {
+        background-color: #F7F8FF;
+      }
+
+      .p {
+        font-size: 25px;
+        margin-left: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+      }
+
+      .inputNumber {
+        height: 50px;
+        width: 365px;
+        border-radius: 8px;
+        overflow: hidden;
+        outline: none;
+        border: 2px solid #818181;
+        font-size: 18px;
+        text-indent: 47px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+
+      .span-placeholder {
+        position: absolute;
+        pointer-events: none;
+        left: 20px;
+        top: 270px;
+        transition: 0.2s ease all;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        opacity: 0.5;
+      }
+
+      .inputNumber:hover {
+        border: 2px solid #000F6A;
+      }
+
+      .contactImg {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 265px;
+        left: 335px;
+      }
+
+      .span-text {
+        height: 10px;
+        width: 168px;
+        background-color: white;
+        position: absolute;
+        top: 245px;
+        left: 30px;
+        opacity: 1;
+        font-size: 14px;
+        color: #818181;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .span-text:hover {
+        color: #000F6A;
+      }
+
+      .terms-box {
+        top: 20px;
+        position: relative;
+        height: 50px;
+      }
+
+      .input-checkbox {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        top: 10px;
+        left: 15px;
+        display: inline-block;
+      }
+
+      .a-link {
+        text-decoration: none;
+        color: #0077EE;
+        top: 10px;
+      }
+
+      .terms-text {
+        position: relative;
+        top: 5px;
+        left: 18px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .btn-continue {
+        position: relative;
+        width: 365px;
+        height: 60px;
+        top: 50px;
+        left: 5px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        background-color: #000F6A;
+        color: white;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .inputLabel {
+        cursor: pointer;
+      }
+
+      .img2 {
+        display: none;
+      }
+
+    }
+
     @media only screen and (min-width: 768px) and (max-width: 1605px) {
       .img {
         display: none;
@@ -144,7 +278,7 @@
         height: 600px;
         width: 400px;
         background-color: #F7F8FF;
-	
+
       }
 
       .mainContent {
@@ -166,30 +300,39 @@
         position: absolute;
         top: 117px;
       }
-
+      
       .input-checkbox {
-        position: absolute;
-        top: 188px;
-        right: 50px;
-      }
-       
-       .contactImg{
-         position:absolute;
-         top:112px;
-         left:325px;
-         
-       }
-       
-      .terms-text {
+        height: 20px;
+        width: 20px;
         position: relative;
-        top:36px;
-        left: 50px;
+        top: 10px;
+        left: 15px;
+        display: inline-block;
+      }
+      
+      .contactImg {
+        position: absolute;
+        top: 112px;
+        left: 325px;
+
+      }
+
+      .terms-box {
+        top: 20px;
+        position: relative;
+        height: 50px;
+      }
+
+
+      .terms-text {
+       position: relative;
+        top: 5px;
+       left: 18px;
+       font-family: 'Montserrat', sans-serif;
       }
 
       .inputNumber {
         text-indent: 50px;
-
-
       }
     }
   </style>
@@ -198,19 +341,23 @@
 
 <body>
   <div class="imgDiv">
- <img src="https://i.ibb.co/sHyLtSc/whatsapp-mobile-0523dbf8.png" class="img"></div>
+    <img src="https://i.ibb.co/sHyLtSc/whatsapp-mobile-0523dbf8.png" class="img">
+  </div>
   <div class="imgDiv2">
-<img src="https://i.ibb.co/ccms1wZ/login-cc50537d.png" class="img2"></div>
+    <img src="https://i.ibb.co/ccms1wZ/login-cc50537d.png" class="img2">
+  </div>
   <div class="mainContent">
     <p class="p">Whatsapp Number</p>
+    <div>
+      <span class="span-text" id="span-text">&nbsp;Enter Phone Number*&nbsp;</span>
+      <span class="span-placeholder">+91</span>
+      <img src="https://i.ibb.co/4K46Rb6/kindpng-1943740.png" class="contactImg">
 
-    <span class="span-text" id="span-text">&nbsp;Enter Phone Number*&nbsp;</span>
-    <span class="span-placeholder">+91</span>
-    <img src="https://i.ibb.co/4K46Rb6/kindpng-1943740.png" class="contactImg">
-
-    <input type="tel" id="inputNumber" class="inputNumber" onclick="mouseOver()" onmouseout="mouseOut()" maxlength="10">
-    <input type="checkbox" class="input-checkbox">
-    <div class="terms-text"> I agree with&nbsp;<a href="#" class="a-link">Terms & Conditions</div>
+      <input type="tel" id="inputNumber" class="inputNumber" onclick="mouseOver()" onmouseout="mouseOut()" maxlength="10">
+    </div>
+    <div class="terms-box"><input type="checkbox" class="input-checkbox">
+      <span class="terms-text">I agree with&nbsp;<a href="#" class="a-link">Terms & Conditions</a></span>
+    </div>
     <label for="inputNumber" class="inputLabel"><button type="submit" class="btn-continue" onclick="mouseOver()" onmouseout="mouseOut()">Continue</button></label>
   </div>
   <script>
