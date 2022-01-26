@@ -13,11 +13,12 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+    
+    
 
     .img {
       height: 160px;
       width: 384px;
-      background-size: red;
     }
 
     .imgDiv {
@@ -259,9 +260,152 @@
         display: none;
       }
     }
-    
+
+          @media only screen and (min-width: 481px) and (max-width: 768px) 
+      {
+      .img {
+        display: none;
+      }
+
+      .img2 {
+        display: block;
+        position: absolute;
+        height:1500px;
+        width:700px;
+        left:420px;
+      }
+      
+   .imgDiv2 {
+     height: 1500px;
+     width: 1500px;
+     background-color: #F7F8FF;
+   }
+        .mainContent{
+       width:1500px;
+       height:1000px;
+       position:absolute;
+       top:1500px;
+        }
      
-    @media only screen and (min-width: 768px) and (max-width: 1605px) {
+      .p {
+        font-size: 25px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        position:absolute;
+        top:10px;
+        font-size: 60px;
+        left:480px;
+      }
+   
+      .span-text {
+        height: 20px;
+        width: 168px;
+        background-color: white;
+        position: absolute;
+        top: 190px;
+        left: 532px;
+        opacity: 1;
+        font-size: 14px;
+        color: #818181;
+        font-family: 'Montserrat', sans-serif;
+        z-index:20;
+      }
+
+      .inputNumber {
+        height: 50px;
+        width: 500px;
+        border-radius: 8px;
+        overflow: hidden;
+        outline: none;
+        border: 2px solid #818181;
+        font-size: 18px;
+        text-indent: 47px;
+        font-family: 'Montserrat', sans-serif;
+        position:absolute;
+        top:200px;
+       left:520px;
+       z-index: 1;
+      }
+
+
+      .span-placeholder {
+        position: absolute;
+        pointer-events: none;
+        left: 530px;
+        top: 217px;
+        transition: 0.2s ease all;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        opacity: 0.5;
+        z-index:10
+      }
+
+      .inputNumber:hover {
+        border: 2px solid #000F6A;
+      }
+
+      .contactImg {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 213px;
+        left: 985px;
+        z-index:2;
+      }
+
+      .span-text:hover {
+        color: #000F6A;
+      }
+
+      .terms-box {
+        top: 320px;
+        left:510px;
+        position: absolute;
+        height: 50px;
+      }
+
+      .input-checkbox {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+      }
+
+      .a-link {
+        text-decoration: none;
+        color: #0077EE;
+      }
+
+      .terms-text {
+        position: relative;
+        top: 5px;
+        left: 18px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .btn-continue {
+        position: absolute;
+        width: 500px;
+        height: 60px;
+        top: 430px;
+        left: 520px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        background-color: #000F6A;
+        color: white;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .inputLabel {
+        cursor: pointer;
+      }
+
+      }
+      
+
+    @media only screen and (min-width: 769px) and (max-width: 1605px) {
       .img {
         display: none;
       }
@@ -270,15 +414,14 @@
         display: block;
         width: 400px;
         position: absolute;
-	top:30px;
-	height:620px;
-         }
+        height:620px;
+        top:20px;
+      }
 
       .imgDiv2 {
-        height: 650px;
+        height: 640px;
         width: 400px;
         background-color: #F7F8FF;
-
       }
 
       .mainContent {
@@ -300,7 +443,7 @@
         position: absolute;
         top: 117px;
       }
-      
+
       .input-checkbox {
         height: 20px;
         width: 20px;
@@ -309,7 +452,7 @@
         left: 15px;
         display: inline-block;
       }
-      
+
       .contactImg {
         position: absolute;
         top: 112px;
@@ -324,10 +467,10 @@
       }
 
       .terms-text {
-       position: relative;
+        position: relative;
         top: 5px;
-       left: 18px;
-       font-family: 'Montserrat', sans-serif;
+        left: 18px;
+        font-family: 'Montserrat', sans-serif;
       }
 
       .inputNumber {
