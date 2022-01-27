@@ -390,45 +390,35 @@
         .img2 {
           display: block;
           width: 400px;
-          height: 660px;
+          height: 640px;
           position: absolute;
           top: 20px;
-          left:20px;
+          left:50px;
         }
 
         .imgDiv {
-          height: 680px;
-          width: 480px;
+          height: 660px;
+          width: 550px;
           background-color: #F7F8FF;
         }
 
         .mainContent {
           position: absolute;
           left: 600px;
-          height: 400px;
-          top: 130px;
-          width: 350px;
+          height: 350px;
+          top: 150px;
+          width: 400px;
         }
-	.btn-continue{
-        position: relative;
-      width: 345px;
-      height: 60px;
-      top: 150px;
-      left: 10px;
-      border-radius: 5px;
-      outline: none;
-      border: none;
-      font-weight: bold;
-      background-color: #000F6A;
-      color: white;
-      font-size: 20px;
-      font-family: 'Montserrat', sans-serif;
-    }
-      
-	html,body{
-          overflow:hidden;
-	}
+        
+.inputOTP::-webkit-outer-spin-button,
+.inputOTP::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+.inputOTP{
+  -moz-appearance: textfield;
+}
       }
   </style>
 
@@ -441,7 +431,7 @@
     <p class="p">Verify With OTP</p>
     <span class="span-text" id="span-text">sent to your number</span>
     <div class="otpBox">
-      <input type="number" class="inputOTP autocomplete=" off maxlength="1">
+      <input type="number" class="inputOTP" autocomplete="off" maxlength="1">
       <input type="number" class="inputOTP" maxlength="1" autocomplete="off">
       <input type="number" autocomplete="off" class="inputOTP" maxlength="1">
       <input type="number" autocomplete="off" class="inputOTP" maxlength="1">
@@ -477,7 +467,6 @@
     const timeH = document.getElementById("otpTimer");
 
     displayTime(timeSecond);
-
     const countDown = setInterval(() => {
       timeSecond--;
       displayTime(timeSecond);
