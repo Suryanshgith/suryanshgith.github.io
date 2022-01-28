@@ -6,540 +6,126 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>HTML</title>
-
-  <!-- HTML -->
+  <title>Homepart</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-    
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-    .img {
-      height: 160px;
-      width: 384px;
-    }
+  
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-    .imgDiv {
-      background-color: #F7F8FF;
+    .heading {
+      width: auto;
+      height:80px;
+      text-align: center;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-family: 'Quicksand', sans-serif;
     }
-
-    .p {
+    .head-head-text{
       font-size: 25px;
-      margin-left: 10px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
+        }
+    .bold-oper{
+      color:#CB0000;
     }
+    .head-foot-text{
+      font-size: 25px;
+}
 
-    .inputNumber {
-      height: 50px;
-      width: 365px;
-      border-radius: 8px;
-      overflow: hidden;
-      outline: none;
-      border: 2px solid #818181;
-      font-size: 18px;
-      text-indent: 47px;
-      font-family: 'Montserrat', sans-serif;
+    .head-foot-text-2{
+      font-size: 25px;
     }
-
-
-    .span-placeholder {
-      position: absolute;
-      pointer-events: none;
-      left: 20px;
-      top: 270px;
-      transition: 0.2s ease all;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 18px;
-      opacity: 0.5;
+    .logo-img{
+      width:370px;
+      height:370px;
+      position: fixed;
+      top:18%;
+      left: 50%;
+      transform: translateX(-50%);
     }
-
-    .inputNumber:hover {
-      border: 2px solid #000F6A;
+     @media (max-width: 480px) {
+           .heading {
+      width: auto;
+      height:80px;
+      text-align: center;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-family: 'Quicksand', sans-serif;
     }
-
-    .contactImg {
-      height: 30px;
-      width: 30px;
-      position: absolute;
-      top: 265px;
-      left: 335px;
+    .head-head-text{
+      font-size: 25px;
+        }
+    .bold-oper{
+      color:#CB0000;
     }
+    .head-foot-text{
+      font-size: 25px;
+}
 
-    .span-text {
-      height: 10px;
-      width: 168px;
-      background-color: white;
-      position: absolute;
-      top: 245px;
-      left: 30px;
-      opacity: 1;
-      font-size: 14px;
-      color: #818181;
-      font-family: 'Montserrat', sans-serif;
+    .head-foot-text-2{
+      font-size: 25px;
     }
-
-    .span-text:hover {
-      color: #000F6A;
+    .logo-img{
+      width:370px;
+      height:370px;
+      position: fixed;
+      top:18%;
+      left: 50%;
+      transform: translateX(-50%);
     }
-
-    .terms-box {
-      top: 20px;
-      position: relative;
-      height: 50px;
+    
+    .head-foot-text-2{
+      display:none;
     }
-
-    .input-checkbox {
-      height: 20px;
-      width: 20px;
-      position: relative;
-      top: 10px;
-      left: 15px;
-      display: inline-block;
-    }
-
-    .a-link {
-      text-decoration: none;
-      color: #0077EE;
-      top: 10px;
-    }
-
-    .terms-text {
-      position: relative;
-      top: 5px;
-      left: 18px;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .btn-continue {
-      position: relative;
-      width: 365px;
-      height: 60px;
-      top: 50px;
-      left: 5px;
-      border-radius: 5px;
-      outline: none;
-      border: none;
-      font-weight: bold;
-      background-color: #000F6A;
-      color: white;
-      font-size: 20px;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .inputLabel {
-      cursor: pointer;
-    }
-
-    .img2 {
+    
+    .logo-img-2 {
       display: none;
     }
-
-    @media (max-width: 480px) {
-      .img {
-        height: 160px;
-        width: 384px;
-        background-size: red;
-      }
-
-      .imgDiv {
-        background-color: #F7F8FF;
-      }
-
-      .p {
-        font-size: 25px;
-        margin-left: 10px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-      }
-
-      .inputNumber {
-        height: 50px;
-        width: 335px;
-        border-radius: 8px;
-        overflow: hidden;
-        outline: none;
-        border: 2px solid #818181;
-        font-size: 18px;
-        text-indent: 47px;
-        font-family: 'Montserrat', sans-serif;
-        position:absolute;
-        left:10px;
-        z-index:10;
-      }
-
-
-      .span-placeholder {
-        position: absolute;
-        pointer-events: none;
-        left: 20px;
-        top: 261px;
-        transition: 0.2s ease all;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 18px;
-        opacity: 0.5;
-        z-index:15;
-      }
-
-      .inputNumber:hover {
-        border: 2px solid #000F6A;
-      }
-
-      .contactImg {
-        height: 30px;
-        width: 30px;
-        position: absolute;
-        top: 258px;
-        left: 313px;
-        z-index:50;
-      }
-
-      .span-text {
-        height: 10px;
-        width: 168px;
-        background-color: white;
-        position: absolute;
-        top: 239px;
-        left: 30px;
-        opacity: 1;
-        font-size: 14px;
-        color: #818181;
-        font-family: 'Montserrat', sans-serif;
-        z-index:20;
-      }
-
-      .span-text:hover {
-        color: #000F6A;
-      }
-
-      .terms-box {
-        top: 75px;
-        position: relative;
-        height: 50px;
-      }
-
-      .input-checkbox {
-        height: 20px;
-        width: 20px;
-        position: relative;
-        top: 10px;
-        left: 15px;
-        display: inline-block;
-      }
-
-      .a-link {
-        text-decoration: none;
-        color: #0077EE;
-        top: 10px;
-      }
-
-      .terms-text {
-        position: relative;
-        top: 5px;
-        left: 18px;
-        font-family: 'Montserrat', sans-serif;
-      }
-
-      .btn-continue {
-        position: relative;
-        width: 345px;
-        height: 60px;
-        top: 100px;
-        left: 10px;
-        border-radius: 5px;
-        outline: none;
-        border: none;
-        font-weight: bold;
-        background-color: #000F6A;
-        color: white;
-        font-size: 20px;
-        font-family: 'Montserrat', sans-serif;
-      }
-
-      .inputLabel {
-        cursor: pointer;
-      }
-
-      .img2 {
-        display: none;
-      }
+    
+    .logo-img-2-div{
+      display: none;
+    }    
+     }   
+    @media only screen and (min-width: 481px) and (max-width: 1605px) {
+            .heading{
+         
+              height:50px;
+              width:auto;
+              display: flex;
+              flex-direction: row;
+              text-align: center;
+              margin:0px auto;
+         justify-content:center;
+             }
+            .head-foot-text{
+              display:none;
+            }
+            .head-foot-text-2{
+              display:inline-block;
+            }
+            .logo-img{
+              display:none;
+            }
+            .logo-img-2{
+             width:600px;
+              position: absolute;
+             
+            }
+            .logo-img-2-div{
+              width:auto;
+              height:250px;
+              display:flex;
+             justify-content:center;
+             align-items: center;
+            }
     }
-
-          @media only screen and (min-width: 481px) and (max-width: 768px) 
-      {
-      .img {
-        display: none;
-      }
-
-      .img2 {
-        display: block;
-        position: absolute;
-        height:770px;
-        width:350px;
-        left:210px;
-      }
-      
-   .imgDiv2 {
-	   position:absolute;
-     height: 770px;
-     width: 100%;
-     background-color: #F7F8FF;
-   }
-      .p {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        position:absolute;
-        top:50px;
-        font-size: 30px;
-        left:220px;
-      }
-   
-      .span-text {
-        height: 10px;
-        width: 84px;
-        background-color: white;
-        position: absolute;
-        top: 145px;
-        left: 275px;
-        opacity: 1;
-        font-size: 7px;
-        color: #818181;
-        font-family: 'Montserrat', sans-serif;
-        z-index:20;
-      }
-
-      .inputNumber {
-        height: 50px;
-        width: 300px;
-        border-radius: 8px;
-        overflow: hidden;
-        outline: none;
-        border: 2px solid #818181;
-        font-size: 18px;
-        text-indent: 47px;
-        font-family: 'Montserrat', sans-serif;
-        position:absolute;
-        top:150px;
-       left:230px;
-       z-index: 1;
-      }
-
-
-      .span-placeholder {
-        position: absolute;
-        pointer-events: none;
-        left: 270px;
-        top: 168px;
-        transition: 0.2s ease all;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 18px;
-        opacity: 0.5;
-        z-index:10
-      }
-
-      .inputNumber:hover {
-        border: 2px solid #000F6A;
-      }
-
-      .contactImg {
-        height: 30px;
-        width: 30px;
-        position: absolute;
-        top: 163px;
-        left: 490px;
-        z-index:2000;
-      }
-
-      .span-text:hover {
-        color: #000F6A;
-      }
-
-      .terms-box {
-        top: 250px;
-        left:220px;
-        position: absolute;
-        height: 50px;
-      }
-
-      .input-checkbox {
-        height: 20px;
-        width: 20px;
-        display: inline-block;
-      }
-
-      .a-link {
-        text-decoration: none;
-        color: #0077EE;
-      }
-
-      .terms-text {
-        position: relative;
-        top: 5px;
-        left: 18px;
-        font-family: 'Montserrat', sans-serif;
-      }
-
-      .btn-continue {
-        position: absolute;
-        width: 300px;
-        height: 60px;
-        top: 350px;
-        left: 230px;
-        border-radius: 5px;
-        outline: none;
-        border: none;
-        font-weight: bold;
-        background-color: #000F6A;
-        color: white;
-        font-size: 20px;
-        font-family: 'Montserrat', sans-serif;
-      }
-
-      .inputLabel {
-        cursor: pointer;
-      }
-
-        .mainContent{
-       width:500px;
-       height:500px;
-       position:absolute;
-       top:750px;
-       left:50px;
-        }
-        
-       html, body{
-        overflow-x:hidden;
-        overflow-y: scroll;
-       }
- 
-     
-      }
-      
-
-    @media only screen and (min-width: 769px) and (max-width: 1605px) {
-      .img {
-        display: none;
-      }
-
-      .img2 {
-        display: block;
-        width: 450px;
-        position: absolute;
-        height:660px;
-        top:20px;
-      }
-
-      .imgDiv2 {
-        position:absolute;
-        height: 680px;
-        width: 450px;
-        background-color: #F7F8FF;
-      }
-
-      .mainContent {
-        position: absolute;
-        left: 500px;
-        height: 400px;
-        top: 130px;
-        width: 400px;
-
-      }
-
-      .span-text {
-        position: relative;
-        top: 10px;
-
-      }
-
-      .span-placeholder {
-        position: absolute;
-        top: 117px;
-      }
-
-      .input-checkbox {
-        height: 20px;
-        width: 20px;
-        position: relative;
-        top: 10px;
-        left: 15px;
-        display: inline-block;
-      }
-
-      .contactImg {
-        position: absolute;
-        top: 112px;
-        left: 325px;
-
-      }
-
-      .terms-box {
-        top: 20px;
-        position: relative;
-        height: 50px;
-      }
-
-      .terms-text {
-        position: relative;
-        top: 5px;
-        left: 18px;
-        font-family: 'Montserrat', sans-serif;
-      }
-
-      .inputNumber {
-        text-indent: 50px;
-      }
-      html,body{
-      overflow:hidden;
-    }
-    }
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-    }
+          
   </style>
-
 </head>
 
 <body>
-  <div class="imgDiv">
-    <img src="https://i.ibb.co/sHyLtSc/whatsapp-mobile-0523dbf8.png" class="img">
-  </div>
-  <div class="imgDiv2">
-    <img src="https://i.ibb.co/ccms1wZ/login-cc50537d.png" class="img2">
-  </div>
-  <div class="mainContent">
-    <p class="p">Whatsapp Number</p>
-    <div>
-      <span class="span-text" id="span-text">&nbsp;Enter Phone Number*&nbsp;</span>
-      <span class="span-placeholder">+91</span>
-      <img src="https://i.ibb.co/4K46Rb6/kindpng-1943740.png" class="contactImg">
-
-      <input type="tel" id="inputNumber" class="inputNumber" onclick="mouseOver()" onmouseout="mouseOut()" maxlength="10">
-    </div>
-    <div class="terms-box"><input type="checkbox" class="input-checkbox">
-      <span class="terms-text">I agree with&nbsp;<a href="#" class="a-link">Terms & Conditions</a></span>
-    </div>
-    <label for="inputNumber" class="inputLabel"><button type="submit" class="btn-continue" onclick="mouseOver()" onmouseout="mouseOut()">Continue</button></label>
-  </div>
-  <script>
-    let spanColor = document.getElementById('span-text')
-
-    function mouseOver() {
-      spanColor.style.color = "#000F6A"
-    }
-
-    function mouseOut() {
-      spanColor.style.color = "#818181"
-    }
-  </script>
+  <div class="heading"><div class="head-head-text"><span class="head-text">Trusted by&nbsp;</span><b class="bold-text">25,000</b><b class="bold-oper">+</b></div><span class="head-foot-text">Restaurant Partners</span><span class="head-foot-text-2">&nbsp;Restaurant Partners</span></div>
+    <img src="https://i.ibb.co/c3Y6rX9/home-restro-mobile.png" class="logo-img">
+  <div class="logo-img-2-div"> <img src="https://i.ibb.co/6WbC0JW/client-logos.png" class="logo-img-2"></div>
 </body>
 
 </html>
