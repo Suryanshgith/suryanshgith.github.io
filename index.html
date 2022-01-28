@@ -1,172 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OTP Page</title>
+
+  <title>HTML</title>
+
+  <!-- HTML -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
+    
     html,
-    body,
-    div,
-    span,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    abbr,
-    address,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    samp,
-    small,
-    strong,
-    sub,
-    sup,
-    var,
-    b,
-    i,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
+    body {
       margin: 0;
       padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
+      overflow: hidden;
     }
-
     .img {
       height: 160px;
-      width:100%;
-      background-color: #F7F8FF;
+      width: 384px;
     }
 
-    .img2 {
-      display: none;
+    .imgDiv {
+      background-color: #F7F8FF;
     }
 
     .p {
       font-size: 25px;
-      position: relative;
-      top: 20px;
       margin-left: 10px;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
+    }
+
+    .inputNumber {
+      height: 50px;
+      width: 365px;
+      border-radius: 8px;
+      overflow: hidden;
+      outline: none;
+      border: 2px solid #818181;
+      font-size: 18px;
+      text-indent: 47px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+
+    .span-placeholder {
+      position: absolute;
+      pointer-events: none;
+      left: 20px;
+      top: 270px;
+      transition: 0.2s ease all;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      opacity: 0.5;
+    }
+
+    .inputNumber:hover {
+      border: 2px solid #000F6A;
+    }
+
+    .contactImg {
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 265px;
+      left: 335px;
     }
 
     .span-text {
       height: 10px;
       width: 168px;
       background-color: white;
-      position: relative;
-      top: 40px;
-      left: 12px;
+      position: absolute;
+      top: 245px;
+      left: 30px;
       opacity: 1;
-      font-size: 15px;
+      font-size: 14px;
       color: #818181;
       font-family: 'Montserrat', sans-serif;
     }
 
-    .inputOTP {
-      width: 40px;
-      height: 40px;
-      font-size: 15px;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
+    .span-text:hover {
+      color: #000F6A;
     }
 
-
-    .otpBox {
+    .terms-box {
+      top: 20px;
       position: relative;
-      top: 65px;
-      left: 5px;
-      width: 354px;
-      display: flex;
-      justify-content: space-evenly;
-      font-family: 'Montserrat', sans-serif;
+      height: 50px;
     }
 
-
-    #otpTimer {
+    .input-checkbox {
+      height: 20px;
+      width: 20px;
       position: relative;
       top: 10px;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
+      left: 15px;
+      display: inline-block;
     }
 
-    .timerDiv {
-      height: 40px;
-      width: 80px;
-      border-radius: 25px;
-      border: 1px solid white;
-      background-color: #C6EDFF;
-      position: relative;
-      top: 100px;
-      left: 10px;
-      font-family: 'Montserrat', sans-serif;
+    .a-link {
+      text-decoration: none;
+      color: #0077EE;
+      top: 10px;
+    }
 
+    .terms-text {
+      position: relative;
+      top: 5px;
+      left: 18px;
+      font-family: 'Montserrat', sans-serif;
     }
 
     .btn-continue {
       position: relative;
       width: 365px;
       height: 60px;
-      top: 150px;
-      left: 15px;
+      top: 50px;
+      left: 5px;
       border-radius: 5px;
       outline: none;
       border: none;
@@ -177,85 +133,125 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    @media only screen and (max-width: 480px) {
+    .inputLabel {
+      cursor: pointer;
+    }
+
+    .img2 {
+      display: none;
+    }
+
+    @media (max-width: 480px) {
       .img {
         height: 160px;
-        width: 100%;
-        background-color: #F7F8FF;
+        width: 384px;
+        background-size: red;
       }
 
-      .img2 {
-        display: none;
+      .imgDiv {
+        background-color: #F7F8FF;
       }
 
       .p {
         font-size: 25px;
-        position: relative;
-        top: 20px;
         margin-left: 10px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
+      }
+
+      .inputNumber {
+        height: 50px;
+        width: 335px;
+        border-radius: 8px;
+        overflow: hidden;
+        outline: none;
+        border: 2px solid #818181;
+        font-size: 18px;
+        text-indent: 47px;
+        font-family: 'Montserrat', sans-serif;
+        position:absolute;
+        left:10px;
+        z-index:10;
+      }
+
+
+      .span-placeholder {
+        position: absolute;
+        pointer-events: none;
+        left: 20px;
+        top: 261px;
+        transition: 0.2s ease all;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        opacity: 0.5;
+        z-index:15;
+      }
+
+      .inputNumber:hover {
+        border: 2px solid #000F6A;
+      }
+
+      .contactImg {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 258px;
+        left: 313px;
+        z-index:50;
       }
 
       .span-text {
         height: 10px;
         width: 168px;
         background-color: white;
-        position: relative;
-        top: 40px;
-        left: 12px;
+        position: absolute;
+        top: 239px;
+        left: 30px;
         opacity: 1;
-        font-size: 15px;
+        font-size: 14px;
         color: #818181;
         font-family: 'Montserrat', sans-serif;
+        z-index:20;
       }
 
-      .inputOTP {
-        width: 40px;
-        height: 40px;
-        font-size: 15px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
+      .span-text:hover {
+        color: #000F6A;
       }
 
-
-      .otpBox {
+      .terms-box {
+        top: 75px;
         position: relative;
-        top: 65px;
-        left: 5px;
-        width: 354px;
-        display: flex;
-        justify-content: space-evenly;
-        font-family: 'Montserrat', sans-serif;
+        height: 50px;
       }
 
-
-      #otpTimer {
+      .input-checkbox {
+        height: 20px;
+        width: 20px;
         position: relative;
         top: 10px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
+        left: 15px;
+        display: inline-block;
       }
 
-      .timerDiv {
-        height: 40px;
-        width: 80px;
-        border-radius: 25px;
-        border: 1px solid white;
-        background-color: #C6EDFF;
-        position: relative;
-        top: 100px;
-        left: 10px;
-        font-family: 'Montserrat', sans-serif;
+      .a-link {
+        text-decoration: none;
+        color: #0077EE;
+        top: 10px;
+      }
 
+      .terms-text {
+        position: relative;
+        top: 5px;
+        left: 18px;
+        font-family: 'Montserrat', sans-serif;
       }
 
       .btn-continue {
         position: relative;
         width: 345px;
         height: 60px;
-        top: 150px;
-        left: 20px;
+        top: 100px;
+        left: 10px;
         border-radius: 5px;
         outline: none;
         border: none;
@@ -265,240 +261,282 @@
         font-size: 20px;
         font-family: 'Montserrat', sans-serif;
       }
-    }
 
-      @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .img {
-          display: none;
-        }
-
-        .img2 {
-          display: block;
-          position: absolute;
-          top:20px;
-          height: 620px;
-          width: 500px;
-          left: 140px;
-        }
-
-        .imgDiv {
-          height: 640px;
-          width: 100%;
-          background-color: #F7F8FF;
-        }
-
-        .mainContent {
-          position: absolute;
-          left:100px;
-          height: 400px;
-          top: 650px;
-          width: 300px;
-        }
-        
-            .p {
-      font-size: 55px;
-      width:500px;
-      position: relative;
-      top: 20px;
-      margin-left: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
-    }
-
-    .span-text {
-      height: 10px;
-      width: 168px;
-      background-color: white;
-      position: relative;
-      top: 40px;
-      left: 25px;
-      opacity: 1;
-      font-size: 25px;
-      color: #818181;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .inputOTP {
-      width: 50px;
-      height: 50px;
-      font-size: 15px;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-
-    .otpBox {
-      position: relative;
-      top: 65px;
-    right:100px;
-      width: 500px;
-      display: flex;
-      justify-content: space-evenly;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-
-    #otpTimer {
-      position: relative;
-      top: 10px;
-    
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .timerDiv {
-      height: 40px;
-     
-      width: 80px;
-      border-radius: 25px;
-      border: 1px solid white;
-      background-color: #C6EDFF;
-      position: relative;
-      top: 100px;
-      left: 30px;
-      font-family: 'Montserrat', sans-serif;
-
-    }
-
-    .btn-continue {
-      position: relative;
-      width: 420px;
-      height: 60px;
-      top: 150px;
-      left: 30px;
-      border-radius: 5px;
-      outline: none;
-      border: none;
-      font-weight: bold;
-      background-color: #000F6A;
-      color: white;
-      font-size: 20px;
-      font-family: 'Montserrat', sans-serif;
-    }
-      
-     html,body{
-       overflow-x: hidden;
-       overflow-y:scroll;
-     }
-      }    
-
-      @media only screen and (min-width: 769px) and (max-width: 1605px) {
-        .img {
-          display: none;
-        }
-
-        .img2 {
-          display: block;
-          width: 400px;
-          height: 640px;
-          position: absolute;
-          top: 20px;
-          left:50px;
-        }
-
-        .imgDiv {
-          height: 660px;
-          width: 550px;
-          background-color: #F7F8FF;
-        }
-
-        .mainContent {
-          position: absolute;
-          left: 600px;
-          height: 350px;
-          top: 150px;
-          width: 400px;
-        }
-        
-.inputOTP::-webkit-outer-spin-button,
-.inputOTP::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.inputOTP{
-  -moz-appearance: textfield;
-}
+      .inputLabel {
+        cursor: pointer;
       }
+
+      .img2 {
+        display: none;
+      }
+    }
+
+          @media only screen and (min-width: 481px) and (max-width: 768px) 
+      {
+      .img {
+        display: none;
+      }
+
+      .img2 {
+        display: block;
+        position: absolute;
+        height:770px;
+        width:350px;
+        left:210px;
+      }
+      
+   .imgDiv2 {
+	   position:absolute;
+     height: 770px;
+     width: 100%;
+     background-color: #F7F8FF;
+   }
+      .p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        position:absolute;
+        top:50px;
+        font-size: 30px;
+        left:220px;
+      }
+   
+      .span-text {
+        height: 10px;
+        width: 84px;
+        background-color: white;
+        position: absolute;
+        top: 145px;
+        left: 275px;
+        opacity: 1;
+        font-size: 7px;
+        color: #818181;
+        font-family: 'Montserrat', sans-serif;
+        z-index:20;
+      }
+
+      .inputNumber {
+        height: 50px;
+        width: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        outline: none;
+        border: 2px solid #818181;
+        font-size: 18px;
+        text-indent: 47px;
+        font-family: 'Montserrat', sans-serif;
+        position:absolute;
+        top:150px;
+       left:230px;
+       z-index: 1;
+      }
+
+
+      .span-placeholder {
+        position: absolute;
+        pointer-events: none;
+        left: 270px;
+        top: 168px;
+        transition: 0.2s ease all;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        opacity: 0.5;
+        z-index:10
+      }
+
+      .inputNumber:hover {
+        border: 2px solid #000F6A;
+      }
+
+      .contactImg {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 163px;
+        left: 490px;
+        z-index:2000;
+      }
+
+      .span-text:hover {
+        color: #000F6A;
+      }
+
+      .terms-box {
+        top: 250px;
+        left:220px;
+        position: absolute;
+        height: 50px;
+      }
+
+      .input-checkbox {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+      }
+
+      .a-link {
+        text-decoration: none;
+        color: #0077EE;
+      }
+
+      .terms-text {
+        position: relative;
+        top: 5px;
+        left: 18px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .btn-continue {
+        position: absolute;
+        width: 300px;
+        height: 60px;
+        top: 350px;
+        left: 230px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        background-color: #000F6A;
+        color: white;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .inputLabel {
+        cursor: pointer;
+      }
+
+        .mainContent{
+       width:500px;
+       height:500px;
+       position:absolute;
+       top:750px;
+       left:50px;
+        }
+        
+       html, body{
+        overflow-x:hidden;
+        overflow-y: scroll;
+       }
+ 
+     
+      }
+      
+
+    @media only screen and (min-width: 769px) and (max-width: 1605px) {
+      .img {
+        display: none;
+      }
+
+      .img2 {
+        display: block;
+        width: 450px;
+        position: absolute;
+        height:640px;
+        top:20px;
+      }
+
+      .imgDiv2 {
+        height: 660px;
+        width: 450px;
+        background-color: #F7F8FF;
+      }
+
+      .mainContent {
+        position: absolute;
+        left: 500px;
+        height: 400px;
+        top: 130px;
+        width: 400px;
+
+      }
+
+      .span-text {
+        position: relative;
+        top: 10px;
+
+      }
+
+      .span-placeholder {
+        position: absolute;
+        top: 117px;
+      }
+
+      .input-checkbox {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        top: 10px;
+        left: 15px;
+        display: inline-block;
+      }
+
+      .contactImg {
+        position: absolute;
+        top: 112px;
+        left: 325px;
+
+      }
+
+      .terms-box {
+        top: 20px;
+        position: relative;
+        height: 50px;
+      }
+
+      .terms-text {
+        position: relative;
+        top: 5px;
+        left: 18px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .inputNumber {
+        text-indent: 50px;
+      }
+    }
+    
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
   </style>
 
 </head>
 
 <body>
-  <img src="https://i.ibb.co/k8xtx6Z/otp-mobile-a0e3637a.png" class="img">
-  <div class="imgDiv"> <img src="https://i.ibb.co/GRn86qD/otp-45be20e9.png" class="img2"></div>
-  <div class="mainContent">
-    <p class="p">Verify With OTP</p>
-    <span class="span-text" id="span-text">sent to your number</span>
-    <div class="otpBox">
-      <input type="number" class="inputOTP" autocomplete="off" maxlength="1">
-      <input type="number" class="inputOTP" maxlength="1" autocomplete="off">
-      <input type="number" autocomplete="off" class="inputOTP" maxlength="1">
-      <input type="number" autocomplete="off" class="inputOTP" maxlength="1">
-      <input type="number" autocomplete="off" class="inputOTP" maxlength="1">
-      <input type="number" autocomplete="off" class="inputOTP" maxlength="1">
-    </div>
-
-    <div class="timerDiv">
-      <div id="otpTimer">00:00</div>
-    </div>
-    <button type="submit" class="btn-continue">Verify</button>
+  <div class="imgDiv">
+    <img src="https://i.ibb.co/sHyLtSc/whatsapp-mobile-0523dbf8.png" class="img">
   </div>
+  <div class="imgDiv2">
+    <img src="https://i.ibb.co/ccms1wZ/login-cc50537d.png" class="img2">
+  </div>
+  <div class="mainContent">
+    <p class="p">Whatsapp Number</p>
+    <div>
+      <span class="span-text" id="span-text">&nbsp;Enter Phone Number*&nbsp;</span>
+      <span class="span-placeholder">+91</span>
+      <img src="https://i.ibb.co/4K46Rb6/kindpng-1943740.png" class="contactImg">
 
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <input type="tel" id="inputNumber" class="inputNumber" onclick="mouseOver()" onmouseout="mouseOut()" maxlength="10">
+    </div>
+    <div class="terms-box"><input type="checkbox" class="input-checkbox">
+      <span class="terms-text">I agree with&nbsp;<a href="#" class="a-link">Terms & Conditions</a></span>
+    </div>
+    <label for="inputNumber" class="inputLabel"><button type="submit" class="btn-continue" onclick="mouseOver()" onmouseout="mouseOut()">Continue</button></label>
+  </div>
   <script>
-    $(function() {
-      $("input").keydown(function() {
-        // Save old value.
-        if (!$(this).val() || (parseInt($(this).val()) <= 9 && parseInt($(this).val()) >= 0))
-          $(this).data("old", $(this).val());
-      });
-      $("input").keyup(function() {
-        // Check correct, else revert back to old value.
-        if (!$(this).val() || (parseInt($(this).val()) <= 9 && parseInt($(this).val()) >= 0))
-        ;
-        else
-          $(this).val($(this).data("old"));
-      });
-    });
+    let spanColor = document.getElementById('span-text')
 
-    let timeSecond = 60;
-    const timeH = document.getElementById("otpTimer");
-
-    displayTime(timeSecond);
-    const countDown = setInterval(() => {
-      timeSecond--;
-      displayTime(timeSecond);
-      if (timeSecond == 0 || timeSecond < 1) {
-        endCount();
-        clearInterval(countDown);
-      }
-    }, 1000);
-
-    function displayTime(second) {
-      const min = Math.floor(second / 60);
-      const sec = Math.floor(second % 60);
-      timeH.innerHTML = `
-      ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
-      `;
+    function mouseOver() {
+      spanColor.style.color = "#000F6A"
     }
 
-    function endCount() {
-      timeH.innerHTML = "<p style ='width:250px; background-color:white;height:60px;position:relative;bottom:28px;right:px;font-size:18px;'>Didn't get OTP?&nbsp;<a href='#' style='text-decoration:none;color:#527AFF;'>Resend</a></p>";
+    function mouseOut() {
+      spanColor.style.color = "#818181"
     }
   </script>
-  <script>
-    var myopt = document.querySelectorAll(".inputOTP");
-    //will check in console first.
-    for (var i = 0; i < myopt.length - 1; i++) {
-      myopt[i].addEventListener("keyup", function() {
-        this.nextElementSibling.focus();
-      })
-    }
-  </script>
-
-
 </body>
 
 </html>
