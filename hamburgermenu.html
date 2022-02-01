@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hamburger menu</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+    .sidenav {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 50px;
+      height: 1520px;
+      width: auto;
+      border-radius: 5px;
+      margin: 0px 15px;
+      background-color: white;
+      transition: 0.5s;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      z-index: 1;
+    }
+
+    .hamIcon {
+      width: 30px;
+      height: 20px;
+      float: right;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    .navChange {
+      display: block;
+    }
+
+    .closeNav {
+      width: 0px;
+    }
+
+    .heading {
+      position: absolute;
+      top: 5px;
+      left: 20px;
+      font-size: 17px;
+      color: #556A98;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .menu-in-div-1 {
+      position: absolute;
+      background-color: white;
+      display: flex;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      top: 70px;
+      padding: 10px 50px;
+      z-index: 4;
+    }
+
+    .link-btn {
+      height: 80px;
+      width: auto;
+    }
+
+    .in-hr {
+      width: 100%;
+      background-color: #00000021;
+      height: 1px;
+      border: 0 none;
+    }
+
+    #last-hr {
+      visibility: hidden;
+    }
+
+    .box-head {
+      color: #2F2F2F;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .box-para {
+      color: #556A98;
+      height: auto;
+      width: auto;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .menu-in-div-1 a {
+      text-decoration: none;
+    }
+
+    .menu-in-div-2 a {
+      text-decoration: none;
+    }
+
+    .main-hr-1 {
+      width: 100%;
+      background-color: #00000021;
+      height: 1px;
+      position: absolute;
+      top: 765px;
+      z-index: 20;
+      border: 0 none;
+    }
+
+    .main-hr-2 {
+      width: 100%;
+      background-color: #00000021;
+      height: 1px;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      z-index: 100;
+      border: 0 none;
+
+    }
+
+    .main-hr-3 {
+      width: 100%;
+      background-color: #00000021;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 55px;
+      z-index: 500;
+      border: 0 none;
+
+    }
+
+    .main-hr-4 {
+      width: 100%;
+      background-color: #00000021;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 490px;
+      z-index: 100;
+      border: 0 none;
+    }
+
+    .menu-item-div-2 {
+      top: 775px;
+      height: 70px;
+      width: auto;
+      height: 65px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      padding: 0px 0px 0px 20px;
+      z-index: 5;
+      color: #556A98;
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;
+      color: #000967;
+      font-weight: bold;
+    }
+
+    .menu-item-div-3 {
+      top: 840px;
+      height: 70px;
+      width: auto;
+      height: 65px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      padding: 0px 0px 0px 20px;
+      font-size: 17px;
+      color: #556A98;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      z-index: 20;
+    }
+
+    .menu-item-div-4 {
+      top: 905px;
+      height: 70px;
+      width: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      padding: 0px 0px 0px 20px;
+      font-size: 17px;
+      color: #556A98;
+      font-weight: bold;
+      z-index: 45;
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    .menu-in-div-2 {
+      position: absolute;
+      background-color: white;
+      display: flex;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      top: 68px;
+      left: 0;
+      padding: 10px 50px;
+      z-index: 4;
+      color: #6369A8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .heading2 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 17px;
+      color: #556A98;
+
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    .menu-item-div-5 {
+      top: 500px;
+      height: 70px;
+      width: auto;
+      height: 65px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      padding: 0px 0px 0px 20px;
+      z-index: 5;
+      font-size: 17px;
+      color: #556A98;
+      font-weight: bold;
+    }
+
+    .create-btn {
+      position: relative;
+      top: 1470px;
+      z-index: 200;
+      width: 100%;
+      height: 50px;
+      left: 0;
+      right: 0;
+      border-radius: 5px;
+      background-color: #0794FF;
+      color: white;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      font-weight: bolder;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #link-btn-7 {
+      height: 100px;
+    }
+
+    #link-btn-8 {
+      height: 100px;
+    }
+
+    #link-btn-9 {
+      height: 100px;
+    }
+
+    .box-para-2 {
+      color: #556A98;
+
+      width: auto;
+      top: 0px;
+      height: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: normal;
+    }
+
+    .menu-a {
+      text-decoration: none;
+      color: #6369A8;
+    }
+
+    @media only screen and (max-width: 767px) {}
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+      .sidenav {
+        height: 1070px;
+      }
+
+      .main-hr-1 {
+        top: 400px;
+        z-index: 100px;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      .main-hr-2 {
+        top: 50px;
+        z-index: 600;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      .main-hr-3 {
+        top: 50px;
+        z-index: 600;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      .main-hr-4 {
+        top: 410px;
+        z-index: 650px;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      .last-hr {
+        display: none;
+      }
+
+      .menu-in-div-1 {
+        display: flex;
+        width: auto;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        height: auto;
+      }
+
+      .menu-box-1 {
+        display: flex;
+        flex-direction: row;
+        height: 94px;
+        justify-content: space-around;
+        width: auto;
+      }
+
+      .menu-box-2 {
+        display: flex;
+        flex-direction: row;
+        height: 94px;
+        justify-content: space-around;
+        width: auto;
+      }
+
+      .menu-box-3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+        height: 94px;
+      }
+
+      .in-hr {
+        display: none;
+      }
+
+      #link-btn-1 {
+        width: 370px;
+        height: 94px;
+      }
+
+      #link-btn-2 {
+        width: 370px;
+        height: 94px;
+      }
+
+      #link-btn-3 {
+        width: 370px;
+        height: 94px;
+      }
+
+      #link-btn-4 {
+        width: 370px;
+        height: 94px;
+      }
+
+      #link-btn-5 {
+        width: 370px;
+        height: 94px;
+      }
+
+      #link-btn-6 {
+        width: 370px;
+        height: 94px;
+      }
+
+      .menu-item-div-2 {
+        top: 405px;
+      }
+
+      .menu-item-div-3 {
+        top: 465px;
+      }
+
+      .menu-item-div-4 {
+        top: 530px;
+
+      }
+
+      .menu-item-div-5 {
+        top: 420px;
+
+      }
+
+      .create-btn {
+        top: 1020px;
+      }
+
+      .last-hr {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="/kindpng_1608917.png" class="hamIcon" id="hamIcon" onclick="startAnime()"></button>
+
+  <div id="mySidenav" class="sidenav">
+
+    <p class="heading">Features</p>
+    <div class="menu-in-div-1">
+      <div class="menu-box-1">
+        <a href="#">
+          <div class="link-btn" id="link-btn-1">
+            <p class="box-head">&#128229;&nbsp;&nbsp;Shared inbox</p>
+            <p class="box-para">Collaborate easily with other agents and manage conversations</p>
+          </div>
+        </a>
+        <hr class="in-hr">
+        <a href="#">
+          <div class="link-btn" id="link-btn-2">
+            <p class="box-head">&#x1F4AC;&nbsp;&nbsp;Live Chat</p>
+            <p class="box-para">
+              Simple and elegant live chat for your website</p>
+          </div>
+        </a>
+        <hr class="in-hr">
+      </div>
+      <div class="menu-box-2">
+        <a href="#">
+          <div class="link-btn" id="link-btn-3">
+            <p class="box-head">&#127905;&nbsp;&nbsp;Channels</p>
+            <p class="box-para">
+              Connect with your customers on the channels of their choice</p>
+          </div>
+        </a>
+        <hr class="in-hr" size="5">
+        <a href="#">
+          <div class="link-btn" id="link-btn-4">
+            <p class="box-head"> &#129302;&nbsp;&nbsp;Chatbots</p>
+            <p class="box-para">
+              Easily integrate with popular chatbot platforms to automate conversations</p>
+          </div>
+        </a>
+        <hr class="in-hr">
+      </div>
+      <div class="menu-box-3">
+        <a href="#">
+          <div class="link-btn" id="link-btn-5">
+            <p class="box-head">&#128241;&nbsp;&nbsp;Mobile Apps</p>
+            <p class="box-para">Don't miss out on new customers. Manage conversations on the go</p>
+          </div>
+        </a>
+        <hr class="in-hr">
+        <a href="#">
+          <div class="link-btn" id="link-btn-6">
+            <p class="box-head">&#9889;&nbsp;&nbsp;Integrations</p>
+            <p class="box-para">
+              Super charge your workflow with integrations</p>
+          </div>
+        </a>
+        <hr class="in-hr" id="last-hr">
+      </div>
+    </div>
+    <hr class="main-hr-1">
+    <div class="menu-item-div-2"><a href="#" class="menu-a">Pricing</a>
+      <hr class="main-hr-2">
+    </div>
+    <div class="menu-item-div-3"><a href="#" class="menu-a">Help Center</a>
+      <hr class="main-hr-3">
+    </div>
+
+    <div class="menu-item-div-4">
+      <div class="heading2">Resources</div>
+      <div class="menu-in-div-2">
+        <a href="#" class="menu-a">
+          <div class="link-btn" id="link-btn-7">
+            <p class="box-head">&#128209;&nbsp;Blog</p>
+            <p class="box-para-2">
+              Read through our journey of building an opensource customer engagement software</p>
+          </div>
+        </a>
+
+        <hr class="in-hr">
+
+        <a href="#">
+          <div class="link-btn" id="link-btn-8">
+            <p class="box-head">&#128293;&nbsp;Changelog</p>
+            <p class="box-para-2"> Read about the new releases of Chatwoot. Learn about new features, product updates, bug fixes etc</p>
+          </div>
+        </a>
+        <hr class="in-hr">
+        <a href="#">
+          <div class="link-btn" id="link-btn-9">
+            <p class="box-head">&#128101;&nbsp;&nbsp;Community</p>
+            <p class="box-para-2">
+              Join our global community of contributors, developers, and enthusiasts</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="menu-item-div-5"><a href="#" class="menu-a">Login</a>
+      </div>
+      <hr class="main-hr-4">
+    </div>
+    <button type="submit" class="create-btn">Create an account </button>
+    <script>
+      function startAnime() {
+        const openNavTimeout = setTimeout(openNav, 250);
+
+      }
+
+      function openNav() {
+        let a = document.getElementById("mySidenav")
+        if (a.classList.contains("navChange")) {
+          a.classList.remove("navChange")
+        }
+        else {
+          a.classList.add("navChange")
+        }
+      }
+
+      function closeNav() {
+        let b = document.getElementById("mySidenav")
+        if (b.classList.contains('navChange')) {
+          b.classList.remove("navChange")
+        }
+        else {
+          b.classList.add("navChange")
+        }
+      }
+    </script>
+
+</body>
+
+</html>
